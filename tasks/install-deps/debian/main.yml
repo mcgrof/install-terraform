@@ -14,4 +14,4 @@
     dest: /usr/local/bin
     remote_src: yes
   when:
-    - force_install_if_present or terraform_present.rc != 0
+    - force_install_if_present|bool or terraform_present.rc != 0
