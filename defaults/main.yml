@@ -1,0 +1,6 @@
+# SPDX-License-Identifier GPL-2.0+
+---
+
+# You can override these
+terraform_version: "0.12.19"
+force_install_if_present: False

@@ -1,0 +1,4 @@
+---
+# Distro specific
+- name: Install terraform
+  include_tasks: install-deps/main.yml
