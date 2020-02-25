@@ -21,9 +21,13 @@ Run a supported OS/distribution:
 Role Variables
 --------------
 
-  * terraform_version: version of terraform to download and install
+  * terraform_version: version of terraform to download and install. This is
+    only used if you are downloading and installing the zip file.
+  * force_install_zip: set to False by default, set this to True to ignore
+    installing the package from your distro and instead install the
+    zip file directly from Hashicorp.
   * force_install_if_present: set to False by default, set this to True if
-    want to force to downlaod terraform even if you already have it present.
+    want to force to download terraform even if you already have it present.
     This is a bad idea, however in lieu of the ability to verify the version
     through a task yet, we enable this for debugging purposes for now.
 
