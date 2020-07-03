@@ -5,6 +5,13 @@
     is_leap: '{{ "Leap" in ansible_distribution }}'
     is_tumbleweed: '{{ "openSUSE Tumbleweed" == ansible_distribution }}'
 
+# SLE has no good package for terraform, and the one from package hub tends to be old
+- name: Override default setting for force_install_zip for SLE
+  set_fact:
+    force_install_zip: true
+  when:
+    - is_sle
+
 - name: Verify terraform installation
   command: "which terraform"
   register: terraform_present
